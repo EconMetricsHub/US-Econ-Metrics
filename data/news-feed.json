@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T19:01:03.087228Z",
+  "checkedAt": "2026-11-09T19:01:03.087228Z",
+  "provider": "Official releases and GDELT",
+  "sourceStatus": {
+    "fed": {
+      "name": "Federal Reserve releases",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "ok": true,
+      "count": 20,
+      "fallback": false,
+      "checkedAt": "2026-11-09T19:01:03.087228Z",
+      "lastSuccess": "2026-11-09T19:01:03.087228Z"
+    },
+    "bea": {
+      "name": "Bureau of Economic Analysis releases",
+      "url": "https://apps.bea.gov/rss/rss.xml",
+      "ok": true,
+      "count": 49,
+      "fallback": false,
+      "checkedAt": "2026-11-09T19:01:03.087228Z",
+      "lastSuccess": "2026-11-09T19:01:03.087228Z"
+    },
+    "gdelt": {
+      "name": "GDELT economic headlines",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+      "ok": false,
+      "count": 0,
+      "fallback": true,
+      "checkedAt": "2026-11-09T19:01:03.087228Z",
+      "lastSuccess": null,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    "bls-cpi": {
+      "name": "BLS Consumer Price Index",
+      "url": "https://www.bls.gov/feed/cpi.rss",
+      "ok": true,
+      "count": 12,
+      "fallback": false,
+      "checkedAt": "2026-11-09T19:04:53.091840Z",
+      "lastSuccess": "2026-11-09T19:04:53.091845Z"
+    },
+    "bls-jobs": {
+      "name": "BLS Employment Situation",
+      "url": "https://www.bls.gov/feed/empsit.rss",
+      "ok": true,
+      "count": 12,
+      "fallback": false,
+      "checkedAt": "2026-11-09T19:04:53.231869Z",
+      "lastSuccess": "2026-11-09T19:04:53.231873Z"
+    }
+  },
+  "items": [
+    {
+      "title": "Payroll employment rises by 165,000 in October; unemployment rate changes little at 4.1%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-11-06T12:50:31.965000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-11-05T16:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "U.S. International Trade in Goods and Services, September 2026",
+      "url": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-september-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-11-04T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-29T20:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "GDP (Advance Estimate), 3rd Quarter 2026",
+      "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-10-29T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, September 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-10-29T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-28T18:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-16T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items increases 0.6% in September; gasoline rises",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-10-14T11:50:31.200000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-13T18:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-09T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm\u2019s failure to sufficiently detect and report certain suspicious activity related to money laundering",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-08T20:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-07T18:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of application by Isabella Bank Corporation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-05T20:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of application by Fleur Capital Corporation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-02T20:45:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-02T20:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-10-02T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Both payroll employment (+29,000) and unemployment rate (4.2%) change little in September",
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-10-02T11:51:08.289000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260930a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-30T13:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Agencies publish resolution plan feedback letters for 15 banking organizations",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260929a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-29T20:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of application by Peoples Bancorp Inc.",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260925a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-25T20:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-24T18:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement action with former employee of Sandy Spring Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260924a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-24T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "U.S. International Transactions and Investment Position, 2nd Quarter 2026",
+      "url": "https://bea.gov/news/2026/us-international-transactions-and-investment-position-2nd-quarter-2026",
+      "domain": "bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-09-24T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of application by BancFirst Corporation",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260922a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-22T20:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement actions with former employee of Northstar Bank, former employee of American Express Travel Related Services Company, Inc., and former employee of Regions Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918a.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-18T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Federal Reserve Board announces termination of enforcement action with SNB Bancshares and Bank of Eufaula",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918b.htm",
+      "domain": "www.federalreserve.gov",
+      "sourceId": "fed",
+      "source": "Federal Reserve releases",
+      "publishedAt": "2026-09-18T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items increases 0.4% in August; gasoline rises",
+      "url": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-09-11T11:50:40.968000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment increases by 162,000 in August; unemployment rate unchanged at 4.1%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-09-04T11:51:08.695000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, July 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-08-26T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items increases 0.1% in July; shelter rises",
+      "url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-08-12T11:51:16.210000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Both payroll employment (-23,000) and unemployment rate (4.1%) change little in July",
+      "url": "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-08-07T11:50:34.021000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, June 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-june-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-07-30T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Direct Investment by Country and Industry, 2025",
+      "url": "https://www.bea.gov/news/2026/direct-investment-country-and-industry-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-07-21T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items falls 0.4% in June; gasoline down",
+      "url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-07-14T11:50:27.969000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Activities of U.S. Affiliates of Foreign Multinational Enterprises, 2024",
+      "url": "https://www.bea.gov/news/2026/activities-us-affiliates-foreign-multinational-enterprises-2024",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-07-10T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Both payroll employment (+57,000) and unemployment rate (4.2%) change little in June",
+      "url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-07-02T11:50:52.662000Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, May 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-may-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-06-25T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "New Foreign Direct Investment in the United States, 2025",
+      "url": "https://www.bea.gov/news/2026/new-foreign-direct-investment-united-states-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-06-10T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.5% in May; gasoline and shelter up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_06102026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-06-10T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment increases by 172,000 in May; unemployment rate unchanged at 4.3%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_06052026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-06-05T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, April 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-05-28T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.6% in April; shelter and gasoline up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_05122026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-05-12T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment edges up by 115,000 in April; unemployment rate unchanged at 4.3%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_05082026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-05-08T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.9% in March; gasoline up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_04102026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-04-10T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment increases by 178,000 in March; unemployment rate changes little at 4.3%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_04032026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-04-03T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, January 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-january-2026",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-03-13T12:31:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.3% in February; shelter up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_03112026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-03-11T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment edges down 92,000 in February; unemployment rate changes little at 4.4%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_03062026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-03-06T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2024",
+      "url": "https://www.bea.gov/news/2026/outdoor-recreation-economic-statistics-us-and-states-2024",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-03-05T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income and Outlays, December 2025",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-02-20T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "GDP (Advance Estimate), 4th Quarter and Year 2025",
+      "url": "https://apps.bea.gov/rss/www.bea.gov/news/2026/gdp-advance-estimate-4th-quarter-and-year-2025",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-02-20T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Real Personal Consumption Expenditures by State and Real Personal Income by State, 2024",
+      "url": "https://www.bea.gov/news/2026/real-personal-consumption-expenditures-state-and-real-personal-income-state-2024",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-02-19T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.2% in January; shelter up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_02132026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-02-13T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Payroll employment rises by 130,000 in January; unemployment rate changes little at 4.3%",
+      "url": "https://www.bls.gov/news.release/archives/empsit_02112026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-02-11T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by County and Personal Income by County, 2024",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-02-05T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by State and Personal Income by State, 3rd Quarter 2025",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-state-and-personal-income-state-3rd-quarter-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-01-23T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "U.S. International Investment Position, 3rd Quarter 2025",
+      "url": "https://www.bea.gov/news/2026/us-international-investment-position-3rd-quarter-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-01-16T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "U.S. International Transactions, 3rd Quarter 2025",
+      "url": "https://www.bea.gov/news/2026/us-international-transactions-3rd-quarter-2025",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2026-01-14T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.3% in December; shelter and food up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_01132026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2026-01-13T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Both payroll employment (+50,000) and unemployment rate (4.4%) change little in December",
+      "url": "https://www.bls.gov/news.release/archives/empsit_01092026.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2026-01-09T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 2.7% over 12 months ending in November; shelter up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_12182025.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2025-12-18T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Both payroll employment (+64,000) and unemployment rate (4.6%) change little in November",
+      "url": "https://www.bls.gov/news.release/archives/empsit_12162025.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-jobs",
+      "source": "BLS Employment Situation",
+      "publishedAt": "2025-12-16T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "CPI for all items rises 0.3% in September; gasoline up",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10242025.htm",
+      "domain": "www.bls.gov",
+      "sourceId": "bls-cpi",
+      "source": "BLS Consumer Price Index",
+      "publishedAt": "2025-10-24T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for Puerto Rico, 2023",
+      "url": "https://www.bea.gov/news/2025/gross-domestic-product-puerto-rico-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2025-09-16T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Activities of U.S. Multinational Enterprises, 2023",
+      "url": "https://www.bea.gov/news/2025/activities-us-multinational-enterprises-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2025-08-22T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Marine Economy Satellite Account, 2023",
+      "url": "https://www.bea.gov/news/2025/marine-economy-satellite-account-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2025-06-05T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Arts and Cultural Production Satellite Account, U.S. and States, 2023",
+      "url": "https://www.bea.gov/news/2025/arts-and-cultural-production-satellite-account-us-and-states-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2025-04-02T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Real Personal Consumption Expenditures by State and Real Personal Income by State and Metropolitan Area, 2023",
+      "url": "https://www.bea.gov/news/2024/real-personal-consumption-expenditures-state-and-real-personal-income-state-and",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-12-12T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by County and Metropolitan Area, 2023",
+      "url": "https://www.bea.gov/news/2024/gross-domestic-product-county-and-metropolitan-area-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-12-04T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for the Commonwealth of the Northern Mariana Islands, 2021 and 2022",
+      "url": "https://www.bea.gov/news/2024/gross-domestic-product-commonwealth-northern-mariana-islands-2021-and-2022",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-11-21T23:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Outdoor Recreation Satellite Account, U.S. and States, 2023",
+      "url": "https://www.bea.gov/news/2024/outdoor-recreation-satellite-account-us-and-states-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-11-20T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income by County and Metropolitan Area, 2023",
+      "url": "https://www.bea.gov/news/2024/personal-income-county-and-metropolitan-area-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-11-14T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Consumption Expenditures by State, 2023",
+      "url": "https://www.bea.gov/news/2024/personal-consumption-expenditures-state-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-10-03T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for the U.S. Virgin Islands, 2022",
+      "url": "https://www.bea.gov/news/2024/gross-domestic-product-us-virgin-islands-2022",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-06-17T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for Guam, 2022",
+      "url": "https://www.bea.gov/news/2024/gross-domestic-product-guam-2022",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2024-04-15T23:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by State, 2nd Quarter 2023 and Comprehensive Update",
+      "url": "https://www.bea.gov/news/2023/gross-domestic-product-state-2nd-quarter-2023-and-comprehensive-update",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2023-12-05T15:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by Industry, 2nd Quarter 2023 and Comprehensive Update",
+      "url": "https://www.bea.gov/news/2023/gross-domestic-product-industry-2nd-quarter-2023-and-comprehensive-update",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2023-12-05T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for American Samoa, 2022",
+      "url": "https://www.bea.gov/news/2023/gross-domestic-product-american-samoa-2022",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2023-10-20T19:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Personal Income by State, 2nd Quarter 2023",
+      "url": "https://www.bea.gov/news/2023/personal-income-state-2nd-quarter-2023",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2023-09-29T14:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by County, 2021",
+      "url": "https://www.bea.gov/news/2022/gross-domestic-product-county-2021",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2022-12-08T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Real Personal Consumption Expenditures and Personal Income by State, 2020",
+      "url": "https://www.bea.gov/news/2021/real-personal-consumption-expenditures-state-and-real-personal-income-state-and",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2021-12-14T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for the CNMI, 2019",
+      "url": "https://www.bea.gov/news/2021/gross-domestic-product-cnmi-2019",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2021-04-06T23:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Real Personal Income by State and Metropolitan Area, 2019",
+      "url": "https://www.bea.gov/news/2020/real-personal-income-state-and-metropolitan-area-2019",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2020-12-15T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "State Quarterly Personal Income, 3rd quarter 2019",
+      "url": "https://www.bea.gov/news/2019/state-personal-income-third-quarter-2019",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2019-12-18T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Local Area Gross Domestic Product, 2018",
+      "url": "https://www.bea.gov/news/2019/local-area-gross-domestic-product-2018",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2019-12-12T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for the Commonwealth of the Northern Mariana Islands (CNMI), 2018",
+      "url": "https://www.bea.gov/news/2019/gross-domestic-product-commonwealth-northern-mariana-islands-cnmi-2018",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2019-11-07T00:00:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product for U.S. Virgin Islands (USVI), 2017",
+      "url": "https://www.bea.gov/news/2018/us-virgin-islands-gdp-decreases-2017",
+      "domain": "www.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2018-12-17T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Foreign Direct Investment by Country and Industry, 2017",
+      "url": "https://apps.bea.gov/newsreleases/international/fdici/2018/fdici0718.htm",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2018-07-30T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Travel and Tourism Satellite Accounts, 3rd quarter 2017",
+      "url": "https://apps.bea.gov/newsreleases/industry/tourism/2017/tour317.htm",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2017-12-13T13:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Gross Domestic Product by Metropolitan Area, 2016",
+      "url": "https://apps.bea.gov/newsreleases/regional/gdp_metro/2017/gdp_metro0917.htm",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2017-09-20T12:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Benchmark Input-Output Account of the U.S. Economy, 2007",
+      "url": "https://apps.bea.gov/newsreleases/industry/io/2013/io1213.htm",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2013-12-18T15:30:00Z",
+      "category": "economy"
+    },
+    {
+      "title": "Summary Estimates for Multinational Companies, 2011",
+      "url": "https://apps.bea.gov/newsreleases/international/mnc/2013/mnc2011.htm",
+      "domain": "apps.bea.gov",
+      "sourceId": "bea",
+      "source": "Bureau of Economic Analysis releases",
+      "publishedAt": "2013-04-18T12:30:00Z",
+      "category": "economy"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name = "macroscope-ai"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://YOUR-WORK-ACCOUNT.github.io"
+LLM_API_BASE = "https://api.groq.com/openai/v1"
+LLM_MODEL = "openai/gpt-oss-20b"
+
+# Secrets are NOT stored in this file.
+# Set them from the worker directory with:
+#   npx.cmd wrangler secret put LLM_API_KEY --config wrangler.toml
+#   npx.cmd wrangler secret put FRED_API_KEY --config wrangler.toml
+
+# Automatic live-data checks. Cron expressions run in UTC.
+[triggers]
+crons = ["*/30 11-23 * * 1-5", "30 1 * * *"]
+
+# D1 live-data binding (add after `wrangler d1 create macroscope-data`).
+# Wrangler prints the database_id. Uncomment and paste it below:
+# [[d1_databases]]
+# binding = "MACROSCOPE_DB"
+# database_name = "macroscope-data"
+# database_id = "PASTE-D1-DATABASE-ID-HERE"
+# migrations_dir = "migrations"

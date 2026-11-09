@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "fed",
+      "name": "Federal Reserve releases",
+      "kind": "rss",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "official": true
+    },
+    {
+      "id": "bls-cpi",
+      "name": "BLS Consumer Price Index",
+      "kind": "rss",
+      "url": "https://www.bls.gov/feed/cpi.rss",
+      "official": true
+    },
+    {
+      "id": "bls-jobs",
+      "name": "BLS Employment Situation",
+      "kind": "rss",
+      "url": "https://www.bls.gov/feed/empsit.rss",
+      "official": true
+    },
+    {
+      "id": "bea",
+      "name": "Bureau of Economic Analysis releases",
+      "kind": "rss",
+      "url": "https://apps.bea.gov/rss/rss.xml",
+      "official": true
+    },
+    {
+      "id": "gdelt",
+      "name": "GDELT economic headlines",
+      "kind": "gdelt",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+      "official": false
+    }
+  ]
+}

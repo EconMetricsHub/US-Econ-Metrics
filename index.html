@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACROSCOPE — U.S. Economic Outlook Simulator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+<link rel="stylesheet" href="assets/css/app.css">
+
+<link rel="stylesheet" href="assets/css/command-center-1.css">
+
+<link rel="stylesheet" href="assets/css/command-center-2.css">
+
+<link rel="stylesheet" href="assets/css/news.css">
+</head>
+<body>
+
+<div id="boot-screen" role="status" aria-live="polite" aria-label="MACROSCOPE initialization">
+  <div class="boot-shell">
+    <div class="boot-brand">MACRO<span>SCOPE</span></div>
+    <div class="boot-build">U.S. ECONOMIC COMMAND CENTER // V8.1</div>
+    <div class="boot-log" id="boot-log"></div>
+    <div class="boot-ready" id="boot-ready" style="display:none">SYSTEM READY <span class="boot-cursor"></span></div>
+    <div class="boot-skip">CLICK OR PRESS ANY KEY TO CONTINUE</div>
+  </div>
+</div>
+
+<div id="app">
+
+  <!-- HEADER / COMMAND BAR -->
+  <div id="hdr">
+    <div class="terminal-brand">
+      <button class="icon-btn sidebar-toggle" onclick="toggleSidebarCompact()" title="Toggle navigation">☰</button>
+      <div class="logo">
+        <span class="logo-mark">MACRO<span class="acc">SCOPE</span></span>
+        <span class="logo-sub">V8.1 // COMMAND CENTER</span>
+      </div>
+    </div>
+    <div class="command-center-search" role="search">
+      <span class="cc-command-icon">⌕</span>
+      <input id="command-center-input" class="cc-command-input" type="text" autocomplete="off"
+        placeholder="Ask MACROSCOPE or type a command…" aria-label="MACROSCOPE command bar"
+        onfocus="openCommandCenter()" oninput="commandCenterInputChanged(this.value)" onkeydown="commandCenterKeydown(event)">
+      <span class="cc-command-key">CTRL K</span>
+    </div>
+    <div class="hdr-r terminal-actions">
+      <div class="country-wrap compact-country" title="Switch economy">
+        <span id="country-flag">&#127482;&#127480;</span>
+        <select class="country-select" id="country-select" onchange="switchCountry(this.value)">
+          <option value="us">US</option><option value="eu">EU</option><option value="cn">CN</option><option value="uk">UK</option><option value="jp">JP</option><option value="em">EM</option>
+        </select>
+      </div>
+      <button class="btn compact-btn" onclick="saveScenario()" title="Save current scenario">SAVE</button>
+      <button id="undo-btn" class="icon-btn" onclick="undo()" title="Undo (Ctrl+Z)" disabled>↶</button>
+      <button id="redo-btn" class="icon-btn" onclick="redo()" title="Redo (Ctrl+Shift+Z)" disabled>↷</button>
+      <button id="tr-toggle" class="btn compact-btn tr-btn" onclick="toggleTaylorRule()" title="Taylor Rule">TAYLOR OFF</button>
+      <button class="btn compact-btn" onclick="showSection('analyst',sectionButton('analyst'))">AI</button>
+      <button class="btn compact-btn" onclick="openAppearancePanel()">THEME</button>
+      <div class="menu-wrap">
+        <button class="btn compact-btn" onclick="toggleTerminalMenu(event)">TOOLS ▾</button>
+        <div id="terminal-menu" class="terminal-menu">
+          <button onclick="shareLink();closeTerminalMenu()">Copy share link</button>
+          <button onclick="exportJSON();closeTerminalMenu()">Export JSON</button>
+          <button onclick="exportCSV();closeTerminalMenu()">Export CSV</button>
+          <button onclick="openPdfModal();closeTerminalMenu()">Upload article PDF</button>
+          <button onclick="toggleShortcuts();closeTerminalMenu()">Keyboard shortcuts</button>
+          <div class="menu-rule"></div>
+          <button class="danger-tool" onclick="resetAll();closeTerminalMenu()">Reset all</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="system-strip">
+    <div><span class="sys-dot live"></span><b>MODEL</b> READY</div>
+    <div><span class="sys-dot live"></span><b>GROQ</b> READY</div>
+    <div id="sys-data"><span class="sys-dot"></span><b>DATA</b> CHECKING</div>
+    <div class="cc-scenario-strip"><b>SCENARIO</b><input id="sc-name" class="cc-scenario-name" type="text" value="Baseline 2026" placeholder="Scenario name"></div>
+    <div class="sys-spacer"></div>
+    <div id="sys-section">HOME</div>
+  </div>
+
+  <!-- METRICS BAR -->
+  <div id="mbar"></div>
+
+  <!-- BODY -->
+  <div id="body">
+
+    <!-- SIDEBAR -->
+    <nav id="sidebar" aria-label="MACROSCOPE workspaces">
+      <div class="cc-nav-brand">COMMAND CENTER</div>
+      <div id="cc-primary-nav" class="cc-primary-nav"></div>
+      <div class="cc-workspace-divider"></div>
+      <div id="cc-workspace-head" class="cc-workspace-head"></div>
+      <div id="cc-workspace-nav" class="cc-workspace-nav"></div>
+      <div class="cc-sidebar-spacer"></div>
+      <div class="cc-sidebar-foot">
+        <button class="cc-mini-action" onclick="openCommandCenter('')"><span>⌕</span><b>Command</b><kbd>Ctrl K</kbd></button>
+        <button class="cc-mini-action" onclick="openAppearancePanel()"><span>◐</span><b>Appearance</b></button>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div id="content-wrap">
+      <main id="content"></main>
+      <div id="elog"><span class="elog-empty">No shocks active — build a scenario in Events &amp; Shocks</span></div>
+    </div>
+
+    <aside id="ai-rail">
+      <div class="rail-kicker"><span class="rail-live"></span> MACROSCOPE COPILOT</div>
+      <div class="rail-title">Research &amp; scenario control</div>
+      <div class="rail-action" onclick="showSection('analyst',sectionButton('analyst'))"><span>✦</span><div><b>Ask MACROSCOPE</b><small>Explain the live model state</small></div></div>
+      <div class="rail-action" onclick="showSection('events',sectionButton('events'))"><span>◬</span><div><b>Scenario Studio</b><small>Build validated counterfactuals</small></div></div>
+      <div class="rail-action" onclick="showSection('data-copilot',sectionButton('data-copilot'))"><span>↻</span><div><b>Update Data</b><small>Research official observations</small></div></div>
+      <div class="rail-divider"></div>
+      <div class="rail-label">LIVE SNAPSHOT</div>
+      <div id="rail-snapshot" class="rail-snapshot"></div>
+      <div class="rail-divider"></div>
+      <div class="rail-label">PROVENANCE</div>
+      <div class="rail-badges"><span class="prov official">OFFICIAL</span><span class="prov model">MODEL</span><span class="prov scenario">SCENARIO</span><span class="prov user">USER</span></div>
+      <div id="rail-foot" class="rail-foot">Scenario context is prompt-filtered before it reaches the LLM.</div>
+    </aside>
+
+  </div>
+
+<!-- TERMINAL APPEARANCE PANEL -->
+<div id="appearance-overlay" class="appearance-overlay" onclick="if(event.target===this)closeAppearancePanel()">
+  <div class="appearance-panel">
+    <div class="appearance-head"><div><span class="eyebrow">TERMINAL SETTINGS</span><h3>Appearance</h3></div><button class="icon-btn" onclick="closeAppearancePanel()">×</button></div>
+    <div class="appearance-section">
+      <label>COLOR PRESET</label>
+      <div class="theme-grid">
+        <button data-theme="amber" onclick="setTerminalTheme('amber')"><i style="--sw:#ffb000"></i>Bloomberg Amber</button>
+        <button data-theme="mono" onclick="setTerminalTheme('mono')"><i style="--sw:#f4f4f4"></i>Terminal Mono</button>
+        <button data-theme="cyan" onclick="setTerminalTheme('cyan')"><i style="--sw:#4ad7ff"></i>Ice Cyan</button>
+        <button data-theme="emerald" onclick="setTerminalTheme('emerald')"><i style="--sw:#34e89e"></i>Emerald</button>
+        <button data-theme="violet" onclick="setTerminalTheme('violet')"><i style="--sw:#b48cff"></i>Violet</button>
+        <button data-theme="red" onclick="setTerminalTheme('red')"><i style="--sw:#ff626e"></i>Alert Red</button>
+      </div>
+    </div>
+    <div class="appearance-section custom-accent-row">
+      <label for="custom-accent">CUSTOM ACCENT</label>
+      <input id="custom-accent" type="color" value="#ffb000" oninput="setCustomAccent(this.value)">
+      <code id="custom-accent-code">#FFB000</code>
+    </div>
+    <div class="appearance-section">
+      <label>DENSITY</label>
+      <div class="seg-control"><button id="density-compact" onclick="setTerminalDensity('compact')">COMPACT</button><button id="density-comfort" onclick="setTerminalDensity('comfortable')">COMFORTABLE</button></div>
+    </div>
+    <div class="appearance-section">
+      <label>DISPLAY</label>
+      <div class="appearance-toggles"><label><input id="toggle-rail" type="checkbox" checked onchange="setRailVisibility(this.checked)"> AI rail</label><label><input id="toggle-boot" type="checkbox" checked onchange="setBootPreference(this.checked)"> Startup sequence</label></div>
+    </div>
+    <div class="appearance-foot">Settings persist in this browser. Charts refresh to the selected accent.</div>
+  </div>
+</div>
+
+<!-- PDF UPLOAD MODAL -->
+<div id="pdf-modal-overlay" onclick="if(event.target===this)closePdfModal()">
+  <div id="pdf-modal">
+    <div class="pm-header">
+      <div class="pm-title">&#128196; Upload <span>News Article / PDF</span></div>
+      <button class="pm-close" onclick="closePdfModal()">&#10005;</button>
+    </div>
+    <div class="pm-body">
+      <div id="pdf-drop-zone"
+        ondragover="event.preventDefault();this.classList.add('drag-over')"
+        ondragleave="this.classList.remove('drag-over')"
+        ondrop="handleDrop(event)">
+        <input type="file" accept=".pdf" onchange="handleFileSelect(event)">
+        <div class="dz-icon">&#128196;</div>
+        <div class="dz-label">Drop a PDF here, or click to browse</div>
+        <div class="dz-sub">News articles, Fed minutes, economic reports, headlines — any PDF</div>
+      </div>
+      <div id="pdf-status">
+        <div class="ps-bar"><div class="ps-fill" id="ps-fill" style="width:0%"></div></div>
+        <div class="ps-label">Analyzing <span class="ps-file" id="ps-filename"></span>…</div>
+      </div>
+      <div id="pdf-results">
+        <div class="pr-summary" id="pr-summary-box"></div>
+        <div class="pr-changes-title">Suggested Slider Adjustments</div>
+        <div class="pr-changes" id="pr-changes-list"></div>
+        <button class="pr-apply" id="pr-apply-btn" onclick="applyPdfChanges()">Apply All Changes to Simulator ↗</button>
+      </div>
+      <div id="pdf-error" style="display:none" class="pr-error"></div>
+    </div>
+  </div>
+</div>
+
+<!-- METRIC DRIVER TOOLTIP -->
+<div id="metric-tip"></div>
+
+<!-- KEYBOARD SHORTCUTS OVERLAY -->
+<div id="shortcuts-overlay" onclick="if(event.target===this)toggleShortcuts()">
+  <div class="sc-modal">
+    <h3>Keyboard Shortcuts <button class="pm-close" onclick="toggleShortcuts()">&#10005;</button></h3>
+    <div class="sc-kbd-row"><span>Focus input search</span><span><kbd>/</kbd></span></div>
+    <div class="sc-kbd-row"><span>Next / previous panel</span><span><kbd>J</kbd><kbd>K</kbd> or <kbd>&#8595;</kbd><kbd>&#8593;</kbd></span></div>
+    <div class="sc-kbd-row"><span>Undo / redo</span><span><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>&#8679;</kbd>+<kbd>Z</kbd></span></div>
+    <div class="sc-kbd-row"><span>Toggle Taylor Rule</span><span><kbd>T</kbd></span></div>
+    <div class="sc-kbd-row"><span>Reset all</span><span><kbd>R</kbd></span></div>
+    <div class="sc-kbd-row"><span>Save scenario</span><span><kbd>S</kbd></span></div>
+    <div class="sc-kbd-row"><span>Export JSON / CSV</span><span><kbd>E</kbd> / <kbd>C</kbd></span></div>
+    <div class="sc-kbd-row"><span>Copy share link</span><span><kbd>L</kbd></span></div>
+    <div class="sc-kbd-row"><span>This help</span><span><kbd>?</kbd></span></div>
+    <div class="sc-kbd-row"><span>Close overlay / search</span><span><kbd>Esc</kbd></span></div>
+  </div>
+</div>
+
+</div>
+
+<script src="assets/js/news-events.js"></script>
+<script src="assets/js/news-client.js"></script>
+<script src="assets/js/core/state.js"></script>
+<script src="assets/js/core/model.js"></script>
+<script src="assets/js/core/news-scenarios.js"></script>
+<script src="assets/js/ui/dashboard.js"></script>
+<script src="assets/js/ui/news.js"></script>
+<script src="assets/js/services/ai.js"></script>
+<script src="assets/js/ui/scenario-tools.js"></script>
+<script src="assets/js/storage/scenarios.js"></script>
+<script src="assets/js/ui/analysis.js"></script>
+<script src="assets/js/storage/history.js"></script>
+<script src="assets/js/ui/interaction.js"></script>
+<script src="assets/js/services/official-data.js"></script>
+<script src="assets/js/ui/terminal.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/command-center.js"></script>
+</body>
+</html>

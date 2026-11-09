@@ -1,0 +1,4003 @@
+{
+  "registryVersion": "2.0.0",
+  "generatedFrom": "index.html CATEGORIES + DEFAULTS",
+  "sliders": {
+    "ffr": {
+      "id": "ffr",
+      "label": "Fed Funds Rate",
+      "description": "Primary FOMC policy lever. Warsh favors rules-based approach over discretion.",
+      "variable": "ffr",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 10,
+      "step": 0.25,
+      "defaultValue": 4.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Primary FOMC policy lever. Warsh favors rules-based approach over discretion.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "qePace": {
+      "id": "qePace",
+      "label": "Balance Sheet (QT ↔ QE)",
+      "description": "Neg = Quantitative Tightening. Pos = QE. Warsh strongly favors continued QT.",
+      "variable": "qePace",
+      "unit": "usd_billions_per_month",
+      "minimum": -150,
+      "maximum": 150,
+      "step": 5,
+      "defaultValue": -25,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Neg = Quantitative Tightening. Pos = QE. Warsh strongly favors continued QT.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "guidanceTone": {
+      "id": "guidanceTone",
+      "label": "Forward Guidance Tone",
+      "description": "Signals future rate path. Shapes long-term yield expectations.",
+      "variable": "guidanceTone",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Signals future rate path. Shapes long-term yield expectations.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "stressTest": {
+      "id": "stressTest",
+      "label": "Bank Stress-Test Stringency",
+      "description": "Higher = tighter capital requirements. Reduces credit supply, improves stability.",
+      "variable": "stressTest",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Higher = tighter capital requirements. Reduces credit supply, improves stability.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "ioer": {
+      "id": "ioer",
+      "label": "Interest on Excess Reserves",
+      "description": "Rate paid on bank reserves at the Fed. Sets effective floor for overnight rates.",
+      "variable": "ioer",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 8,
+      "step": 0.25,
+      "defaultValue": 4.4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Rate paid on bank reserves at the Fed. Sets effective floor for overnight rates.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "warshrules": {
+      "id": "warshrules",
+      "label": "Rules-Based Policy Adherence",
+      "description": "Adherence to Taylor Rule vs. discretion. Higher = more predictable, lower inflation risk premium.",
+      "variable": "warshrules",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Adherence to Taylor Rule vs. discretion. Higher = more predictable, lower inflation risk premium.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "monetary",
+      "version": "2.0.0"
+    },
+    "deficit": {
+      "id": "deficit",
+      "label": "Federal Deficit (% of GDP)",
+      "description": "Primary deficit as % of GDP. US currently ~6.5%. High deficits crowd out private investment and raise yields.",
+      "variable": "deficit",
+      "unit": "percent_of_gdp",
+      "minimum": -2,
+      "maximum": 20,
+      "step": 0.5,
+      "defaultValue": 6.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Primary deficit as % of GDP. US currently ~6.5%. High deficits crowd out private investment and raise yields.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "corpTax": {
+      "id": "corpTax",
+      "label": "Corporate Tax Rate",
+      "description": "Federal corporate income tax. Directly affects business investment and profit repatriation.",
+      "variable": "corpTax",
+      "unit": "percent",
+      "minimum": 10,
+      "maximum": 40,
+      "step": 1,
+      "defaultValue": 21,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Federal corporate income tax. Directly affects business investment and profit repatriation.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "incomeTax": {
+      "id": "incomeTax",
+      "label": "Top Marginal Income Tax",
+      "description": "Top federal rate. Affects high-earner behavior, capital formation, and talent retention.",
+      "variable": "incomeTax",
+      "unit": "percent",
+      "minimum": 30,
+      "maximum": 70,
+      "step": 1,
+      "defaultValue": 37,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Top federal rate. Affects high-earner behavior, capital formation, and talent retention.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "capGainsTax": {
+      "id": "capGainsTax",
+      "label": "Capital Gains Tax Rate",
+      "description": "Long-term capital gains rate. Key driver of investment realization and startup ecosystem health.",
+      "variable": "capGainsTax",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 45,
+      "step": 1,
+      "defaultValue": 20,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Long-term capital gains rate. Key driver of investment realization and startup ecosystem health.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "govSpend": {
+      "id": "govSpend",
+      "label": "Gov't Spending Growth (% YoY)",
+      "description": "Year-over-year federal outlay growth. Keynesian multiplier effects; inflationary at high rates.",
+      "variable": "govSpend",
+      "unit": "percent_yoy",
+      "minimum": -5,
+      "maximum": 15,
+      "step": 0.5,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Year-over-year federal outlay growth. Keynesian multiplier effects; inflationary at high rates.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "defenseSpend": {
+      "id": "defenseSpend",
+      "label": "Defense Spending (% of GDP)",
+      "description": "Military outlays. Technology spillovers (internet, GPS) but crowds out productive investment.",
+      "variable": "defenseSpend",
+      "unit": "percent_of_gdp",
+      "minimum": 2,
+      "maximum": 8,
+      "step": 0.1,
+      "defaultValue": 3.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Military outlays. Technology spillovers (internet, GPS) but crowds out productive investment.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "regBurden": {
+      "id": "regBurden",
+      "label": "Federal Regulatory Burden",
+      "description": "Cost of federal regulatory compliance. Every +1 costs ~0.05% GDP per year in model.",
+      "variable": "regBurden",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Cost of federal regulatory compliance. Every +1 costs ~0.05% GDP per year in model.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "fedPermit": {
+      "id": "fedPermit",
+      "label": "Federal Permitting Speed",
+      "description": "NEPA and agency permit timelines. Critical bottleneck for energy, mining, and infrastructure.",
+      "variable": "fedPermit",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "NEPA and agency permit timelines. Critical bottleneck for energy, mining, and infrastructure.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "tenYear",
+        "privateInvestment",
+        "sp500",
+        "deficit"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "fiscal",
+      "version": "2.0.0"
+    },
+    "innovRate": {
+      "id": "innovRate",
+      "label": "Benchmark TFP Growth Rate",
+      "description": "Total Factor Productivity growth. Pre-AI trend: ~1.2%/yr. Key long-run GDP potential driver.",
+      "variable": "innovRate",
+      "unit": "model_units",
+      "minimum": 0,
+      "maximum": 4,
+      "step": 0.1,
+      "defaultValue": 1.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Total Factor Productivity growth. Pre-AI trend: ~1.2%/yr. Key long-run GDP potential driver.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "rdSpend": {
+      "id": "rdSpend",
+      "label": "R&D Spending (% of GDP)",
+      "description": "Public + private R&D investment. US currently ~3.1%. Each +1% boosts TFP by ~0.18%/yr.",
+      "variable": "rdSpend",
+      "unit": "percent_of_gdp",
+      "minimum": 1,
+      "maximum": 6,
+      "step": 0.1,
+      "defaultValue": 3.1,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Public + private R&D investment. US currently ~3.1%. Each +1% boosts TFP by ~0.18%/yr.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "aiAdoption": {
+      "id": "aiAdoption",
+      "label": "AI/Automation Adoption Index",
+      "description": "Breadth of AI integration across industries. Major productivity unlock — potentially transformative.",
+      "variable": "aiAdoption",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Breadth of AI integration across industries. Major productivity unlock — potentially transformative.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "vcFunding": {
+      "id": "vcFunding",
+      "label": "VC/Startup Funding ($B/yr)",
+      "description": "Annual venture capital deployment. Funds frontier innovation and new market creation.",
+      "variable": "vcFunding",
+      "unit": "usd_billions_per_year",
+      "minimum": 50,
+      "maximum": 600,
+      "step": 10,
+      "defaultValue": 170,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Annual venture capital deployment. Funds frontier innovation and new market creation.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "patentRate": {
+      "id": "patentRate",
+      "label": "Patent Filing Rate (index)",
+      "description": "Innovation output proxy. Linked to university-industry tech transfer quality.",
+      "variable": "patentRate",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Innovation output proxy. Linked to university-industry tech transfer quality.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "stemGrowth": {
+      "id": "stemGrowth",
+      "label": "STEM Workforce Growth (% YoY)",
+      "description": "Growth of science and engineering workforce. Critical constraint on innovation rate.",
+      "variable": "stemGrowth",
+      "unit": "percent_yoy",
+      "minimum": 0,
+      "maximum": 8,
+      "step": 0.5,
+      "defaultValue": 2,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Growth of science and engineering workforce. Critical constraint on innovation rate.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "uniIndustry": {
+      "id": "uniIndustry",
+      "label": "University–Industry Linkage",
+      "description": "Research commercialization depth. US leads globally but varies enormously by metro.",
+      "variable": "uniIndustry",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Research commercialization depth. US leads globally but varies enormously by metro.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "privateInvestment",
+        "sp500",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "innovation",
+      "version": "2.0.0"
+    },
+    "foreignDemand": {
+      "id": "foreignDemand",
+      "label": "Foreign UST Demand (index)",
+      "description": "Demand from foreign central banks (China, Japan). Anchors long yields. Any pullback raises rates substantially.",
+      "variable": "foreignDemand",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Demand from foreign central banks (China, Japan). Anchors long yields. Any pullback raises rates substantially.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "igSpreads": {
+      "id": "igSpreads",
+      "label": "IG Credit Spreads (bps)",
+      "description": "Investment-grade corporate spreads over Treasuries. Widens in recessions, tightens in booms.",
+      "variable": "igSpreads",
+      "unit": "basis_points",
+      "minimum": 50,
+      "maximum": 600,
+      "step": 10,
+      "defaultValue": 100,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Investment-grade corporate spreads over Treasuries. Widens in recessions, tightens in booms.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "hySpreads": {
+      "id": "hySpreads",
+      "label": "High-Yield Spreads (bps)",
+      "description": "Junk bond spreads. Best real-time recession barometer. >800bps historically precedes contractions.",
+      "variable": "hySpreads",
+      "unit": "basis_points",
+      "minimum": 200,
+      "maximum": 2000,
+      "step": 25,
+      "defaultValue": 350,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Junk bond spreads. Best real-time recession barometer. >800bps historically precedes contractions.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "tstIssuance": {
+      "id": "tstIssuance",
+      "label": "Treasury Issuance Pace",
+      "description": "Volume of new Treasury supply hitting markets. High supply competes for demand, raises yields.",
+      "variable": "tstIssuance",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Volume of new Treasury supply hitting markets. High supply competes for demand, raises yields.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "ycc": {
+      "id": "ycc",
+      "label": "Yield Curve Control Intensity",
+      "description": "BoJ-style Fed cap on long yields. Suppresses 10yr, but at risk of inflation loss of control.",
+      "variable": "ycc",
+      "unit": "model_units",
+      "minimum": 0,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "BoJ-style Fed cap on long yields. Suppresses 10yr, but at risk of inflation loss of control.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "termPremium": {
+      "id": "termPremium",
+      "label": "Term Premium (bps)",
+      "description": "Extra yield demanded for duration risk. Negative in 2010s (safe haven flows). Rising with deficit.",
+      "variable": "termPremium",
+      "unit": "basis_points",
+      "minimum": -100,
+      "maximum": 300,
+      "step": 10,
+      "defaultValue": 30,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Extra yield demanded for duration risk. Negative in 2010s (safe haven flows). Rising with deficit.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "creditImpulse": {
+      "id": "creditImpulse",
+      "label": "Credit Impulse (YoY Δ pp)",
+      "description": "Change in YoY private credit growth — the most powerful short-run GDP leading indicator (Bridges et al., BIS). Positive = credit accelerating; negative = contracting.",
+      "variable": "creditImpulse",
+      "unit": "model_units",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 0.5,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Change in YoY private credit growth — the most powerful short-run GDP leading indicator (Bridges et al., BIS). Positive = credit accelerating; negative = contracting.",
+      "downstreamEffects": [
+        "tenYear",
+        "twoYear",
+        "mortgage",
+        "creditConditions",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "bonds",
+      "version": "2.0.0"
+    },
+    "tariff": {
+      "id": "tariff",
+      "label": "Average Tariff Rate",
+      "description": "Effective average tariff on all imports. Each +1% tariff → ~+0.02% CPI and -0.015% GDP.",
+      "variable": "tariff",
+      "unit": "model_units",
+      "minimum": 0,
+      "maximum": 60,
+      "step": 1,
+      "defaultValue": 10,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Effective average tariff on all imports. Each +1% tariff → ~+0.02% CPI and -0.015% GDP.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "dxy": {
+      "id": "dxy",
+      "label": "Dollar Strength (DXY)",
+      "description": "USD index vs major currencies. Strong dollar = cheaper imports, but hurts exports and EM debt.",
+      "variable": "dxy",
+      "unit": "model_units",
+      "minimum": 75,
+      "maximum": 135,
+      "step": 1,
+      "defaultValue": 104,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "USD index vs major currencies. Strong dollar = cheaper imports, but hurts exports and EM debt.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "tradeBalance": {
+      "id": "tradeBalance",
+      "label": "Trade Balance (% of GDP)",
+      "description": "Current account. US structural deficit. Strong dollar widens it; tariffs have mixed effects.",
+      "variable": "tradeBalance",
+      "unit": "percent_of_gdp",
+      "minimum": -10,
+      "maximum": 3,
+      "step": 0.5,
+      "defaultValue": -3.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Current account. US structural deficit. Strong dollar widens it; tariffs have mixed effects.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "chinaDecoupling": {
+      "id": "chinaDecoupling",
+      "label": "China Decoupling Intensity",
+      "description": "Supply chain and tech bifurcation from China. Higher = more nearshoring costs short-term; more resilience long-term.",
+      "variable": "chinaDecoupling",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Supply chain and tech bifurcation from China. Higher = more nearshoring costs short-term; more resilience long-term.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "fdiInflows": {
+      "id": "fdiInflows",
+      "label": "FDI Inflows Index",
+      "description": "Foreign direct investment into US. Driven by policy certainty, profitability, and dollar stability.",
+      "variable": "fdiInflows",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Foreign direct investment into US. Driven by policy certainty, profitability, and dollar stability.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "nearshoring": {
+      "id": "nearshoring",
+      "label": "Nearshoring/Reshoring Progress",
+      "description": "Pace of supply chain return to US/Mexico/Canada. Short-term costs, long-term resilience dividend.",
+      "variable": "nearshoring",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Pace of supply chain return to US/Mexico/Canada. Short-term costs, long-term resilience dividend.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "dollar",
+        "tradeBalance",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "trade",
+      "version": "2.0.0"
+    },
+    "housingSupply": {
+      "id": "housingSupply",
+      "label": "New Housing Units/yr (M)",
+      "description": "Annual residential construction. Structural US deficit ~400K/yr. Biggest long-run affordability lever.",
+      "variable": "housingSupply",
+      "unit": "millions_of_units_per_year",
+      "minimum": 0.5,
+      "maximum": 3,
+      "step": 0.1,
+      "defaultValue": 1.4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Annual residential construction. Structural US deficit ~400K/yr. Biggest long-run affordability lever.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "zoning": {
+      "id": "zoning",
+      "label": "Zoning Restrictiveness",
+      "description": "Density restrictions at local level. Primary barrier to housing supply in coastal metros.",
+      "variable": "zoning",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Density restrictions at local level. Primary barrier to housing supply in coastal metros.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "fedLandPermit": {
+      "id": "fedLandPermit",
+      "label": "Federal Land Permitting",
+      "description": "Access to federal land for development. Major lever in Mountain West and Sun Belt.",
+      "variable": "fedLandPermit",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Access to federal land for development. Major lever in Mountain West and Sun Belt.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "pti": {
+      "id": "pti",
+      "label": "Price-to-Income Ratio",
+      "description": "Median home price / median HH income. Historical avg ~3.5x. US now ~7x; coastal metros 10-14x.",
+      "variable": "pti",
+      "unit": "model_units",
+      "minimum": 3,
+      "maximum": 14,
+      "step": 0.5,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Median home price / median HH income. Historical avg ~3.5x. US now ~7x; coastal metros 10-14x.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "vacancyRate": {
+      "id": "vacancyRate",
+      "label": "Vacancy Rate (%)",
+      "description": "Share of housing stock vacant. Low vacancy = tight market = upward price pressure.",
+      "variable": "vacancyRate",
+      "unit": "percent",
+      "minimum": 1,
+      "maximum": 12,
+      "step": 0.5,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Share of housing stock vacant. Low vacancy = tight market = upward price pressure.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "commercialREStress": {
+      "id": "commercialREStress",
+      "label": "Commercial RE Stress",
+      "description": "Office vacancies, CRE loan delinquencies. Threatens regional bank balance sheets.",
+      "variable": "commercialREStress",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Office vacancies, CRE loan delinquencies. Threatens regional bank balance sheets.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "housingAct": {
+      "id": "housingAct",
+      "label": "Housing Act Implementation",
+      "description": "21st Century Road to Housing Act — federal incentives to build. Each unit = implementation progress.",
+      "variable": "housingAct",
+      "unit": "model_units",
+      "minimum": 0,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "21st Century Road to Housing Act — federal incentives to build. Each unit = implementation progress.",
+      "downstreamEffects": [
+        "housingAffordability",
+        "housingActivity",
+        "gdp",
+        "cpi",
+        "mortgage",
+        "regionalBanks"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "housing",
+      "version": "2.0.0"
+    },
+    "unemp": {
+      "id": "unemp",
+      "label": "Unemployment Rate",
+      "description": "U-3 headline. Fed dual mandate target ~4.0%. Okun's Law: 1% unemployment = ~-0.15% GDP.",
+      "variable": "unemp",
+      "unit": "model_units",
+      "minimum": 2,
+      "maximum": 15,
+      "step": 0.1,
+      "defaultValue": 4.1,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "U-3 headline. Fed dual mandate target ~4.0%. Okun's Law: 1% unemployment = ~-0.15% GDP.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "lfp": {
+      "id": "lfp",
+      "label": "Labor Force Participation (%)",
+      "description": "Share of working-age in labor force. Pre-2008 peak: 66%. Aging demographics create structural drag.",
+      "variable": "lfp",
+      "unit": "percent",
+      "minimum": 55,
+      "maximum": 70,
+      "step": 0.5,
+      "defaultValue": 62.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Share of working-age in labor force. Pre-2008 peak: 66%. Aging demographics create structural drag.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "minWage": {
+      "id": "minWage",
+      "label": "Federal Minimum Wage ($/hr)",
+      "description": "Federal floor unchanged since 2009. Many cities/states far exceed this. Wage floor affects CPI.",
+      "variable": "minWage",
+      "unit": "usd_per_hour",
+      "minimum": 7.25,
+      "maximum": 25,
+      "step": 0.25,
+      "defaultValue": 7.25,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Federal floor unchanged since 2009. Many cities/states far exceed this. Wage floor affects CPI.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "unionMem": {
+      "id": "unionMem",
+      "label": "Union Membership (%)",
+      "description": "Unionization rate. Drives wage floors and labor market rigidity. Currently at historic lows (~10%).",
+      "variable": "unionMem",
+      "unit": "percent",
+      "minimum": 5,
+      "maximum": 35,
+      "step": 1,
+      "defaultValue": 10,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Unionization rate. Drives wage floors and labor market rigidity. Currently at historic lows (~10%).",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "highSkillImmig": {
+      "id": "highSkillImmig",
+      "label": "High-Skill Immigration (index)",
+      "description": "H-1B, EB-5, O-1 policy generosity. Critical for tech/biotech/finance talent pipeline.",
+      "variable": "highSkillImmig",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "H-1B, EB-5, O-1 policy generosity. Critical for tech/biotech/finance talent pipeline.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "autoDisplace": {
+      "id": "autoDisplace",
+      "label": "Automation Displacement Rate",
+      "description": "Speed of AI/robot job displacement. Creates structural unemployment if skills gap is large.",
+      "variable": "autoDisplace",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Speed of AI/robot job displacement. Creates structural unemployment if skills gap is large.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "skillsGap": {
+      "id": "skillsGap",
+      "label": "Skills Gap Severity",
+      "description": "Mismatch between available workers and employer needs. Major bottleneck for growth and investment.",
+      "variable": "skillsGap",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Mismatch between available workers and employer needs. Major bottleneck for growth and investment.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "noncompete": {
+      "id": "noncompete",
+      "label": "Noncompete Enforcement",
+      "description": "Higher enforcement = less labor mobility, less startup formation, lower wage competition.",
+      "variable": "noncompete",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Higher enforcement = less labor mobility, less startup formation, lower wage competition.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "unemployment",
+        "laborForceParticipation",
+        "wages"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "labor",
+      "version": "2.0.0"
+    },
+    "oil": {
+      "id": "oil",
+      "label": "Crude Oil Price ($/bbl)",
+      "description": "WTI spot price. ~$10 change → ~0.15% CPI. Central variable linking geopolitics to inflation.",
+      "variable": "oil",
+      "unit": "usd_per_barrel",
+      "minimum": 30,
+      "maximum": 200,
+      "step": 1,
+      "defaultValue": 72,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "WTI spot price. ~$10 change → ~0.15% CPI. Central variable linking geopolitics to inflation.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "natgas": {
+      "id": "natgas",
+      "label": "Natural Gas ($/MMBtu)",
+      "description": "Henry Hub. Drives electricity costs, industrial production, winter heating. Very seasonal.",
+      "variable": "natgas",
+      "unit": "usd_per_mmbtu",
+      "minimum": 1,
+      "maximum": 20,
+      "step": 0.5,
+      "defaultValue": 3.5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Henry Hub. Drives electricity costs, industrial production, winter heating. Very seasonal.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "electricCost": {
+      "id": "electricCost",
+      "label": "Electricity Cost Index",
+      "description": "Industrial and residential power costs. High costs hurt manufacturing competitiveness vs. Asia.",
+      "variable": "electricCost",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Industrial and residential power costs. High costs hurt manufacturing competitiveness vs. Asia.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "renewableShare": {
+      "id": "renewableShare",
+      "label": "Renewable Capacity Share (%)",
+      "description": "Wind + solar + hydro of US power. Long-run deflationary; short-run requires grid investment.",
+      "variable": "renewableShare",
+      "unit": "percent",
+      "minimum": 5,
+      "maximum": 70,
+      "step": 1,
+      "defaultValue": 22,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Wind + solar + hydro of US power. Long-run deflationary; short-run requires grid investment.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "carbonPolicy": {
+      "id": "carbonPolicy",
+      "label": "Carbon Policy Stringency",
+      "description": "Carbon taxes/cap-and-trade. Short-run inflationary; long-run efficiency gains and energy security.",
+      "variable": "carbonPolicy",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 3,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Carbon taxes/cap-and-trade. Short-run inflationary; long-run efficiency gains and energy security.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "spr": {
+      "id": "spr",
+      "label": "Strategic Petroleum Reserve (%)",
+      "description": "SPR fill level (max 713M barrels). Drawdowns can dampen price spikes. Currently rebuilding.",
+      "variable": "spr",
+      "unit": "percent",
+      "minimum": 15,
+      "maximum": 100,
+      "step": 5,
+      "defaultValue": 55,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "SPR fill level (max 713M barrels). Drawdowns can dampen price spikes. Currently rebuilding.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "lngExport": {
+      "id": "lngExport",
+      "label": "LNG Export Capacity",
+      "description": "US liquefied natural gas export terminals. Revenue source + energy diplomacy with EU allies.",
+      "variable": "lngExport",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "US liquefied natural gas export terminals. Revenue source + energy diplomacy with EU allies.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "oilConflict": {
+      "id": "oilConflict",
+      "label": "Middle East Supply Risk",
+      "description": "Iran, Yemen, Strait of Hormuz risk. Directly maps to oil price volatility premium.",
+      "variable": "oilConflict",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Iran, Yemen, Strait of Hormuz risk. Directly maps to oil price volatility premium.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "consumerIncome",
+        "industrialProduction",
+        "sp500"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "energy",
+      "version": "2.0.0"
+    },
+    "privateCapex": {
+      "id": "privateCapex",
+      "label": "Private CAPEX (% of GDP)",
+      "description": "Private business fixed investment. Strongest leading indicator of future productivity growth.",
+      "variable": "privateCapex",
+      "unit": "percent_of_gdp",
+      "minimum": 10,
+      "maximum": 25,
+      "step": 0.5,
+      "defaultValue": 17,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Private business fixed investment. Strongest leading indicator of future productivity growth.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "infraSpend": {
+      "id": "infraSpend",
+      "label": "Infrastructure Spending ($B/yr)",
+      "description": "Federal + state infrastructure. IIJA authorized $1.2T over 5 years. Roads, rail, grid, broadband.",
+      "variable": "infraSpend",
+      "unit": "usd_billions_per_year",
+      "minimum": 100,
+      "maximum": 1200,
+      "step": 25,
+      "defaultValue": 350,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Federal + state infrastructure. IIJA authorized $1.2T over 5 years. Roads, rail, grid, broadband.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "permitSpeed": {
+      "id": "permitSpeed",
+      "label": "Federal Permitting Speed",
+      "description": "NEPA review timelines. A 2-year permit takes 4-7 years in practice. Reform = massive CAPEX unlock.",
+      "variable": "permitSpeed",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "NEPA review timelines. A 2-year permit takes 4-7 years in practice. Reform = massive CAPEX unlock.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "localPermit": {
+      "id": "localPermit",
+      "label": "Local Permitting Speed",
+      "description": "Building permits at city/county level. Critical bottleneck for housing AND industrial siting.",
+      "variable": "localPermit",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Building permits at city/county level. Critical bottleneck for housing AND industrial siting.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "shippingCost": {
+      "id": "shippingCost",
+      "label": "Shipping/Freight Cost Index",
+      "description": "Container rates, trucking costs, port congestion. Post-COVID has normalized but remains elevated.",
+      "variable": "shippingCost",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Container rates, trucking costs, port congestion. Post-COVID has normalized but remains elevated.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "portEff": {
+      "id": "portEff",
+      "label": "Port Efficiency Index",
+      "description": "US port throughput vs. global peers. Chronic lag vs. Rotterdam and Singapore costs US competitiveness.",
+      "variable": "portEff",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "US port throughput vs. global peers. Chronic lag vs. Rotterdam and Singapore costs US competitiveness.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "broadband": {
+      "id": "broadband",
+      "label": "Broadband Penetration (%)",
+      "description": "Households with high-speed access. Critical for remote work, digital economy, rural inclusion.",
+      "variable": "broadband",
+      "unit": "percent",
+      "minimum": 60,
+      "maximum": 100,
+      "step": 1,
+      "defaultValue": 82,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Households with high-speed access. Critical for remote work, digital economy, rural inclusion.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "gridReliability": {
+      "id": "gridReliability",
+      "label": "Grid Reliability Index",
+      "description": "Power grid resilience. AI data centers creating massive new demand. Blackouts = GDP loss.",
+      "variable": "gridReliability",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Power grid resilience. AI data centers creating massive new demand. Blackouts = GDP loss.",
+      "downstreamEffects": [
+        "gdp",
+        "productivity",
+        "cpi",
+        "privateInvestment",
+        "supplyCapacity"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "infra",
+      "version": "2.0.0"
+    },
+    "stateCorpTax": {
+      "id": "stateCorpTax",
+      "label": "Avg State Corporate Tax (%)",
+      "description": "Average state corporate income tax. Ranges: 0% (SD, WY, NV) to 11.5% (NJ). Location decisions.",
+      "variable": "stateCorpTax",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 12,
+      "step": 0.5,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Average state corporate income tax. Ranges: 0% (SD, WY, NV) to 11.5% (NJ). Location decisions.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "stateRegEnv": {
+      "id": "stateRegEnv",
+      "label": "State Regulatory Environment",
+      "description": "Composite state-level regulatory burden. CA/NY (high) vs TX/FL (low). Divergence accelerating.",
+      "variable": "stateRegEnv",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Composite state-level regulatory burden. CA/NY (high) vs TX/FL (low). Divergence accelerating.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "interstateMigration": {
+      "id": "interstateMigration",
+      "label": "Migration to Low-Tax States",
+      "description": "Net domestic migration to Sun Belt/low-tax states. Reallocates labor, capital, and tax base.",
+      "variable": "interstateMigration",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Net domestic migration to Sun Belt/low-tax states. Reallocates labor, capital, and tax base.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "stateFiscalHealth": {
+      "id": "stateFiscalHealth",
+      "label": "State Fiscal Health Index",
+      "description": "Pension funding ratios, unfunded liabilities, credit ratings. Underfunded = future tax hikes.",
+      "variable": "stateFiscalHealth",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Pension funding ratios, unfunded liabilities, credit ratings. Underfunded = future tax hikes.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "localPermitState": {
+      "id": "localPermitState",
+      "label": "State Housing Reform Progress",
+      "description": "Zoning reform, ADU legalization, by-right permitting. CA SB9, MT HB 382 examples.",
+      "variable": "localPermitState",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 3,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Zoning reform, ADU legalization, by-right permitting. CA SB9, MT HB 382 examples.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "propTax": {
+      "id": "propTax",
+      "label": "Avg Property Tax Rate (%)",
+      "description": "Effective property tax. NJ ~2.5%, HI ~0.3%. Major component of housing carrying costs.",
+      "variable": "propTax",
+      "unit": "percent",
+      "minimum": 0.3,
+      "maximum": 3.5,
+      "step": 0.1,
+      "defaultValue": 1.1,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Effective property tax. NJ ~2.5%, HI ~0.3%. Major component of housing carrying costs.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "rightToWork": {
+      "id": "rightToWork",
+      "label": "Right-to-Work Coverage (%)",
+      "description": "Share of US workers in RTW states. Affects union density, labor costs, and business location.",
+      "variable": "rightToWork",
+      "unit": "percent",
+      "minimum": 30,
+      "maximum": 80,
+      "step": 5,
+      "defaultValue": 50,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Share of US workers in RTW states. Affects union density, labor costs, and business location.",
+      "downstreamEffects": [
+        "gdp",
+        "migration",
+        "housing",
+        "privateInvestment",
+        "stateFiscalHealth"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "state",
+      "version": "2.0.0"
+    },
+    "policyCert": {
+      "id": "policyCert",
+      "label": "Policy Certainty Index",
+      "description": "Baker-Bloom-Davis EPU (inverted). Uncertainty = deferred CAPEX and hiring. Currently elevated.",
+      "variable": "policyCert",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 4,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Baker-Bloom-Davis EPU (inverted). Uncertainty = deferred CAPEX and hiring. Currently elevated.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "polarization": {
+      "id": "polarization",
+      "label": "Political Polarization",
+      "description": "Congressional gridlock, societal division. Legislates through crises, not planning. Currently ~8/10.",
+      "variable": "polarization",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 8,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Congressional gridlock, societal division. Legislates through crises, not planning. Currently ~8/10.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "ruleOfLaw": {
+      "id": "ruleOfLaw",
+      "label": "Rule of Law Strength",
+      "description": "Property rights, contract enforcement, judicial independence. Foundation of long-term investment.",
+      "variable": "ruleOfLaw",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Property rights, contract enforcement, judicial independence. Foundation of long-term investment.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "govEffective": {
+      "id": "govEffective",
+      "label": "Government Effectiveness",
+      "description": "Bureaucratic quality, public service delivery. Affects permitting execution, spending efficiency.",
+      "variable": "govEffective",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Bureaucratic quality, public service delivery. Affects permitting execution, spending efficiency.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "cbIndependence": {
+      "id": "cbIndependence",
+      "label": "Central Bank Independence",
+      "description": "Political insulation of the Fed. Erosion raises inflation risk premium in long-term bonds.",
+      "variable": "cbIndependence",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Political insulation of the Fed. Erosion raises inflation risk premium in long-term bonds.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "socialCapital": {
+      "id": "socialCapital",
+      "label": "Social Capital (Trust Index)",
+      "description": "Putnam: trust in institutions, civic participation. Predicts investment, cooperation, long-run growth.",
+      "variable": "socialCapital",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Putnam: trust in institutions, civic participation. Predicts investment, cooperation, long-run growth.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "regCapture": {
+      "id": "regCapture",
+      "label": "Regulatory Capture Risk",
+      "description": "Degree regulators serve industry vs. public interest. Distorts markets, suppresses competition.",
+      "variable": "regCapture",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Degree regulators serve industry vs. public interest. Distorts markets, suppresses competition.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "mediaQuality": {
+      "id": "mediaQuality",
+      "label": "Information Quality Index",
+      "description": "Media independence, misinformation prevalence. Low quality → policy dysfunction and misallocation.",
+      "variable": "mediaQuality",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Media independence, misinformation prevalence. Low quality → policy dysfunction and misallocation.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "electoralStab": {
+      "id": "electoralStab",
+      "label": "Electoral Stability",
+      "description": "Legitimacy of elections and transitions. Instability raises risk premia across all asset classes.",
+      "variable": "electoralStab",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 7,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Legitimacy of elections and transitions. Instability raises risk premia across all asset classes.",
+      "downstreamEffects": [
+        "gdp",
+        "riskPremium",
+        "privateInvestment",
+        "sp500",
+        "recessionRisk"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "politecon",
+      "version": "2.0.0"
+    },
+    "conflictIndex": {
+      "id": "conflictIndex",
+      "label": "Global Conflict Index",
+      "description": "Active conflicts affecting trade, energy, and capital flows. Currently elevated.",
+      "variable": "conflictIndex",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Active conflicts affecting trade, energy, and capital flows. Currently elevated.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "natoCommit": {
+      "id": "natoCommit",
+      "label": "NATO Commitment Strength",
+      "description": "US commitment to Article 5. Lower commitment shifts burden to Europe, affects defense budgets.",
+      "variable": "natoCommit",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "US commitment to Article 5. Lower commitment shifts burden to Europe, affects defense budgets.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "chinaMilRisk": {
+      "id": "chinaMilRisk",
+      "label": "China Military Risk (Taiwan)",
+      "description": "Taiwan Strait, South China Sea. Escalation scenario would dwarf 2008 financial crisis in scope.",
+      "variable": "chinaMilRisk",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Taiwan Strait, South China Sea. Escalation scenario would dwarf 2008 financial crisis in scope.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "energyGeopolitics": {
+      "id": "energyGeopolitics",
+      "label": "Energy Supply Chain Fragility",
+      "description": "Risk of oil/LNG/critical mineral supply disruption. Iran, Russia, and Hormuz key chokepoints.",
+      "variable": "energyGeopolitics",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 5,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "Risk of oil/LNG/critical mineral supply disruption. Iran, Russia, and Hormuz key chokepoints.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "dollarReserve": {
+      "id": "dollarReserve",
+      "label": "Dollar Reserve Currency Status",
+      "description": "USD share of global FX reserves. Erosion raises US borrowing costs and reduces policy space.",
+      "variable": "dollarReserve",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 8,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "USD share of global FX reserves. Erosion raises US borrowing costs and reduces policy space.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "cyberRisk": {
+      "id": "cyberRisk",
+      "label": "Cyber Security Risk",
+      "description": "State-sponsored attacks on financial system, grid, and infrastructure. Systemic and underpriced risk.",
+      "variable": "cyberRisk",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "State-sponsored attacks on financial system, grid, and infrastructure. Systemic and underpriced risk.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    },
+    "allyRelations": {
+      "id": "allyRelations",
+      "label": "Allied Relations Index",
+      "description": "US relations with Five Eyes, EU, Japan, South Korea. Affects trade, tech cooperation, and security.",
+      "variable": "allyRelations",
+      "unit": "index_points",
+      "minimum": 1,
+      "maximum": 10,
+      "step": 1,
+      "defaultValue": 6,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set",
+        "increase",
+        "decrease"
+      ],
+      "economicMeaning": "US relations with Five Eyes, EU, Japan, South Korea. Affects trade, tech cooperation, and security.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "oil",
+        "riskPremium",
+        "sp500",
+        "trade"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "category": "geopolitics",
+      "version": "2.0.0"
+    }
+  },
+  "shockTargets": {
+    "gdpA": {
+      "id": "gdpA",
+      "label": "GDP direct effect",
+      "description": "Time-dependent shock channel for gdp direct effect.",
+      "variable": "gdpA",
+      "unit": "percentage_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the gdp direct effect before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "gdp",
+        "recessionRisk",
+        "sp500"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "cpiA": {
+      "id": "cpiA",
+      "label": "CPI direct effect",
+      "description": "Time-dependent shock channel for cpi direct effect.",
+      "variable": "cpiA",
+      "unit": "percentage_points",
+      "minimum": -5,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the cpi direct effect before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "cpi",
+        "interestRate",
+        "realIncome",
+        "consumption"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "spA": {
+      "id": "spA",
+      "label": "S&P proxy effect",
+      "description": "Time-dependent shock channel for s&p proxy effect.",
+      "variable": "spA",
+      "unit": "percent",
+      "minimum": -50,
+      "maximum": 50,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the s&p proxy effect before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "sp500",
+        "portfolio"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "ffr": {
+      "id": "ffr",
+      "label": "Policy rate shock",
+      "description": "Time-dependent shock channel for policy rate shock.",
+      "variable": "ffr",
+      "unit": "percentage_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the policy rate shock before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "policyRate",
+        "tenYear",
+        "mortgage",
+        "gdp",
+        "cpi"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "oil": {
+      "id": "oil",
+      "label": "WTI oil price change",
+      "description": "Time-dependent shock channel for wti oil price change.",
+      "variable": "oil",
+      "unit": "usd_per_barrel_change",
+      "minimum": -100,
+      "maximum": 100,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the wti oil price change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "energy",
+        "consumerIncome"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "natgas": {
+      "id": "natgas",
+      "label": "Natural gas price change",
+      "description": "Time-dependent shock channel for natural gas price change.",
+      "variable": "natgas",
+      "unit": "usd_per_mmbtu_change",
+      "minimum": -15,
+      "maximum": 15,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the natural gas price change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "cpi",
+        "industry",
+        "energy"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "tariff": {
+      "id": "tariff",
+      "label": "Average tariff change",
+      "description": "Time-dependent shock channel for average tariff change.",
+      "variable": "tariff",
+      "unit": "percentage_points",
+      "minimum": -30,
+      "maximum": 50,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the average tariff change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "trade"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "shippingCost": {
+      "id": "shippingCost",
+      "label": "Shipping stress change",
+      "description": "Time-dependent shock channel for shipping stress change.",
+      "variable": "shippingCost",
+      "unit": "index_points",
+      "minimum": -8,
+      "maximum": 8,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the shipping stress change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "cpi",
+        "gdp",
+        "trade"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "unemp": {
+      "id": "unemp",
+      "label": "Unemployment change",
+      "description": "Time-dependent shock channel for unemployment change.",
+      "variable": "unemp",
+      "unit": "percentage_points",
+      "minimum": -5,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the unemployment change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "unemployment",
+        "gdp",
+        "consumption"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "lfp": {
+      "id": "lfp",
+      "label": "Labor-force participation change",
+      "description": "Time-dependent shock channel for labor-force participation change.",
+      "variable": "lfp",
+      "unit": "percentage_points",
+      "minimum": -10,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the labor-force participation change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "laborForceParticipation",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "innovRate": {
+      "id": "innovRate",
+      "label": "TFP growth change",
+      "description": "Time-dependent shock channel for tfp growth change.",
+      "variable": "innovRate",
+      "unit": "percentage_points",
+      "minimum": -2,
+      "maximum": 2,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the tfp growth change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "productivity",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "aiAdoption": {
+      "id": "aiAdoption",
+      "label": "AI adoption change",
+      "description": "Time-dependent shock channel for ai adoption change.",
+      "variable": "aiAdoption",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the ai adoption change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "productivity",
+        "gdp",
+        "labor"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "privateCapex": {
+      "id": "privateCapex",
+      "label": "Private CAPEX change",
+      "description": "Time-dependent shock channel for private capex change.",
+      "variable": "privateCapex",
+      "unit": "percentage_points_of_gdp",
+      "minimum": -10,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the private capex change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "investment",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "housingSupply": {
+      "id": "housingSupply",
+      "label": "Housing supply change",
+      "description": "Time-dependent shock channel for housing supply change.",
+      "variable": "housingSupply",
+      "unit": "millions_of_units_per_year_change",
+      "minimum": -1.5,
+      "maximum": 1.5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the housing supply change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "housing",
+        "cpi",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "deficit": {
+      "id": "deficit",
+      "label": "Deficit change",
+      "description": "Time-dependent shock channel for deficit change.",
+      "variable": "deficit",
+      "unit": "percentage_points_of_gdp",
+      "minimum": -10,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the deficit change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "deficit",
+        "tenYear",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "govSpend": {
+      "id": "govSpend",
+      "label": "Government spending growth change",
+      "description": "Time-dependent shock channel for government spending growth change.",
+      "variable": "govSpend",
+      "unit": "percentage_points",
+      "minimum": -10,
+      "maximum": 10,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the government spending growth change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "gdp",
+        "cpi",
+        "deficit"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "igSpreads": {
+      "id": "igSpreads",
+      "label": "Investment-grade spread change",
+      "description": "Time-dependent shock channel for investment-grade spread change.",
+      "variable": "igSpreads",
+      "unit": "basis_points",
+      "minimum": -300,
+      "maximum": 1000,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the investment-grade spread change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "credit",
+        "gdp",
+        "sp500"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "hySpreads": {
+      "id": "hySpreads",
+      "label": "High-yield spread change",
+      "description": "Time-dependent shock channel for high-yield spread change.",
+      "variable": "hySpreads",
+      "unit": "basis_points",
+      "minimum": -800,
+      "maximum": 2000,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the high-yield spread change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "credit",
+        "recessionRisk",
+        "sp500"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "creditImpulse": {
+      "id": "creditImpulse",
+      "label": "Credit impulse change",
+      "description": "Time-dependent shock channel for credit impulse change.",
+      "variable": "creditImpulse",
+      "unit": "percentage_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 0.05,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the credit impulse change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "credit",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "termPremium": {
+      "id": "termPremium",
+      "label": "Term premium change",
+      "description": "Time-dependent shock channel for term premium change.",
+      "variable": "termPremium",
+      "unit": "basis_points",
+      "minimum": -200,
+      "maximum": 300,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the term premium change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "tenYear",
+        "mortgage",
+        "sp500"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "foreignDemand": {
+      "id": "foreignDemand",
+      "label": "Foreign Treasury demand change",
+      "description": "Time-dependent shock channel for foreign treasury demand change.",
+      "variable": "foreignDemand",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the foreign treasury demand change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "tenYear",
+        "dollar"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "dxy": {
+      "id": "dxy",
+      "label": "Dollar index change",
+      "description": "Time-dependent shock channel for dollar index change.",
+      "variable": "dxy",
+      "unit": "index_points",
+      "minimum": -30,
+      "maximum": 30,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the dollar index change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "dollar",
+        "trade",
+        "cpi"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "policyCert": {
+      "id": "policyCert",
+      "label": "Policy certainty change",
+      "description": "Time-dependent shock channel for policy certainty change.",
+      "variable": "policyCert",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the policy certainty change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "investment",
+        "gdp",
+        "riskPremium"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "ruleOfLaw": {
+      "id": "ruleOfLaw",
+      "label": "Rule of law change",
+      "description": "Time-dependent shock channel for rule of law change.",
+      "variable": "ruleOfLaw",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the rule of law change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "investment",
+        "riskPremium",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "conflictIndex": {
+      "id": "conflictIndex",
+      "label": "Global conflict change",
+      "description": "Time-dependent shock channel for global conflict change.",
+      "variable": "conflictIndex",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the global conflict change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "riskPremium",
+        "oil",
+        "trade",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "commercialREStress": {
+      "id": "commercialREStress",
+      "label": "Commercial real-estate stress change",
+      "description": "Time-dependent shock channel for commercial real-estate stress change.",
+      "variable": "commercialREStress",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the commercial real-estate stress change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "regionalBanks",
+        "credit",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "gridReliability": {
+      "id": "gridReliability",
+      "label": "Grid reliability change",
+      "description": "Time-dependent shock channel for grid reliability change.",
+      "variable": "gridReliability",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the grid reliability change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "industry",
+        "gdp",
+        "energy"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    },
+    "nearshoring": {
+      "id": "nearshoring",
+      "label": "Nearshoring progress change",
+      "description": "Time-dependent shock channel for nearshoring progress change.",
+      "variable": "nearshoring",
+      "unit": "index_points",
+      "minimum": -5,
+      "maximum": 5,
+      "step": 1,
+      "defaultValue": 0,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "economicMeaning": "Full-effect magnitude of the nearshoring progress change before timing, confidence, overlap and decay are applied.",
+      "downstreamEffects": [
+        "trade",
+        "investment",
+        "gdp"
+      ],
+      "source": "MACROSCOPE structured shock engine",
+      "version": "2.0.0"
+    }
+  },
+  "settings": {
+    "taylor_rule_enabled": {
+      "id": "taylor_rule_enabled",
+      "label": "Taylor Rule",
+      "description": "Enable or disable automatic policy-rate setting from the simulator Taylor Rule.",
+      "variable": "taylorRuleOn",
+      "unit": "boolean",
+      "defaultValue": false,
+      "regionAvailability": [
+        "us",
+        "eu",
+        "uk",
+        "jp",
+        "cn",
+        "em"
+      ],
+      "allowedOperations": [
+        "set"
+      ],
+      "allowedValues": [
+        false,
+        true
+      ],
+      "economicMeaning": "When enabled, MACROSCOPE computes the policy rate from inflation and unemployment instead of leaving the rate fully discretionary.",
+      "downstreamEffects": [
+        "policyRate",
+        "tenYear",
+        "mortgage",
+        "gdp",
+        "cpi"
+      ],
+      "source": "MACROSCOPE local simulator model",
+      "version": "2.0.0"
+    }
+  }
+}
